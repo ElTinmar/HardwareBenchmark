@@ -1,6 +1,7 @@
 # download data and save as csv
 
 import requests
+import pandas as pd
 
 data = 'Data'
 urls = {
@@ -17,5 +18,7 @@ for device, address_list in urls.items():
     res = requests.get(address)
     if res.status_code != 200:
       raise requests.ConnectionError(address)
+    data = pd.read_html(res.content)
+    print(data)
 
-    
+  #https://www.cpubenchmark.net/data/?_=1708356438606
