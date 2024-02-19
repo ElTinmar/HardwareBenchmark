@@ -1,0 +1,10 @@
+name: HardwareBenchmark
+channels:
+- conda-forge
+dependencies:
+- python == 3.8.16
+- pip
+- ipython
+- pandas
+- seaborn
+- requests
